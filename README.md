@@ -4,13 +4,17 @@ ETL/Data Pipeline to process eCommerce product data between ERP and PIM systems.
 SAP_to_Sales_Layer_Data_Converter Script Notes and Documentation
 
 NOTE: This document is incomplete and only a high level view of how the components work together. It is missing NLP, AI, and upload/change tracking functions completely.
+
 Overview:
 
 Reads exported SAP product data, converts it for upload to Sales Layer, matches product images in the Sales Layer media library, plus searches a designated file system for matching product images if none found in the media library.
 
 The main function that forms the infrastructure and controls this workflow is:
+
 runSAPDataToSalesLayerDataConversion(inputFile, outputPath)
+
 This assembles the major functional pieces (read SAP CSV export, generate Sales Layer product/variant data, find matching images) into an ordered workflow. It receives an SAP product data export and a network path as input parameters (an input file and a folder for output).
+
 11/14/2022:
     • As of this date input will be a flat file (current CSV). Currently, ecomm doesn’t have API access to SAP. Ecomm does expect to have possible FTP site access in the future.
     • Will upload data and images directly to Sales Layer.
