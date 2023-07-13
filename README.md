@@ -1,5 +1,5 @@
 # ERP-to-PIM-Data-Pipeline
-ETL/Data Pipeline to process eCommerce product data between ERP and PIM systems. 
+ETL/Data Pipeline to process ecommerce product data between ERP and PIM systems. 
 
 SAP_to_Sales_Layer_Data_Converter Script Notes and Documentation
 
